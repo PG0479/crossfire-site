@@ -1,84 +1,149 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <title>Chrysler Crossfire</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #eee;
-    }
+<meta charset="UTF-8">
+<title>Chrysler Crossfire</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0b0b;
+  color: white;
+}
+
+/* MENU */
+nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+/* HERO */
 header {
-  background: url('https://upload.wikimedia.org/wikipedia/commons/3/3b/Chrysler_Crossfire.jpg') center/cover;
-  height: 300px;
+  height: 100vh;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/3/3b/Chrysler_Crossfire.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-shadow: 2px 2px 10px black;
+  text-align: center;
 }
-
 header h1 {
-  font-size: 3em;
-  background: rgba(0,0,0,0.5);
-  padding: 10px 20px;
-  border-radius: 10px;
+  font-size: 60px;
+}
+header span {
+  color: red;
 }
 
+/* SEKCJE */
 section {
-  padding: 30px;
+  padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
 h2 {
-  border-bottom: 2px solid #444;
-  padding-bottom: 10px;
+  border-left: 4px solid red;
+  padding-left: 10px;
 }
 
+/* STATY */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.stat {
+  text-align: center;
+}
+.stat h3 {
+  color: red;
+  font-size: 30px;
+}
+
+/* GALERIA */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
 .gallery img {
-  width: 30%;
+  width: 32%;
   margin: 1%;
   border-radius: 10px;
 }
 
-.card {
-  background: #1c1c1c;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 15px;
+/* FAQ */
+.faq p {
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 5px;
 }
 
+/* KONTAKT */
+.contact {
+  text-align: center;
+}
+
+/* STOPKA */
 footer {
+  background: black;
   text-align: center;
   padding: 20px;
-  background: #000;
-  margin-top: 30px;
+  margin-top: 40px;
 }
-  </style>
+</style>
+
 </head>
 <body>
 
-<header>
-  <h1>Chrysler Crossfire</h1>
+<nav>
+  <a href="#home">Start</a>
+  <a href="#about">O aucie</a>
+  <a href="#gallery">Galeria</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Kontakt</a>
+</nav>
+
+<header id="home">
+  <div>
+    <h1>Chrysler <span>Crossfire</span></h1>
+    <p>Legenda motoryzacji 🔥</p>
+  </div>
 </header>
 
-<section>
-  <h2>🚗 O samochodzie</h2>
-  <div class="card">
-    <p>
-      Chrysler Crossfire to sportowe coupe produkowane w latach 2003–2008.
-      Powstał we współpracy z Mercedes-Benz i bazuje na modelu SLK R170.
-    </p>
-    <p>
-      Charakteryzuje się unikalnym designem z charakterystycznym tyłem w stylu "boat-tail".
-    </p>
+<section id="about">
+  <h2>O samochodzie</h2>
+  <p>
+    Chrysler Crossfire (2003–2008) to sportowe coupe stworzone przy współpracy z Mercedes-Benz.
+    Bazuje na platformie SLK i wyróżnia się unikalnym designem.
+  </p>
+
+  <div class="stats">
+    <div class="stat">
+      <h3>330 KM</h3>
+      <p>Moc</p>
+    </div>
+    <div class="stat">
+      <h3>5.1 s</h3>
+      <p>0-100 km/h</p>
+    </div>
+    <div class="stat">
+      <h3>250 km/h</h3>
+      <p>Max</p>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>📸 Galeria</h2>
+<section id="gallery">
+  <h2>Galeria</h2>
   <div class="gallery">
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Chrysler_Crossfire.jpg">
     <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Chrysler_Crossfire_rear.jpg">
@@ -86,39 +151,25 @@ footer {
   </div>
 </section>
 
-<section>
-  <h2>💡 Ciekawostki</h2>
-  <div class="card">
-    <ul>
-      <li>Około 80% części pochodzi z Mercedesa SLK</li>
-      <li>Dostępna była wersja SRT-6 z kompresorem</li>
-      <li>Auto produkowano w Niemczech</li>
-    </ul>
+<section id="faq">
+  <h2>FAQ</h2>
+  <div class="faq">
+    <p><strong>Czy to dobre auto na co dzień?</strong><br>Raczej dla pasjonatów 🙂</p>
+    <p><strong>Czy jest drogie?</strong><br>Średnie koszty utrzymania</p>
   </div>
 </section>
 
-<section>
-  <h2>❓ FAQ</h2>
-  <div class="card">
-    <p><strong>Czy to dobre auto na co dzień?</strong><br>
-    Raczej dla pasjonatów – mało praktyczne, ale daje dużo frajdy.</p>
-<p><strong>Czy jest drogie w utrzymaniu?</strong><br>
-Części Mercedesa = umiarkowane koszty, ale nie najtańsze.</p>
-  </div>
-</section>
-
-<section>
-  <h2>📞 Kontakt</h2>
-  <div class="card">
+<section id="contact">
+  <h2>Kontakt</h2>
+  <div class="contact">
     <p>Email: crossfire@fanpage.pl</p>
     <p>Instagram: @crossfire_fans</p>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Fanpage Chrysler Crossfire</p>
+  <p>© 2026 Chrysler Crossfire Fanpage</p>
 </footer>
 
 </body>
 </html>
-
